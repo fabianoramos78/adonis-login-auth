@@ -1,0 +1,9 @@
+<p>Olá {{ username }}</p>,
+
+<p>
+  Bem vindo ao sistema de Autenticação. Por favor confirme seu endereço de email clicando no link abaixo:
+</p>
+
+<p>
+  <a href="{{ appUrl('register/confirm/' + confirmation_token) }}">Confirmar endereço de e-mail</a>
+</p>
