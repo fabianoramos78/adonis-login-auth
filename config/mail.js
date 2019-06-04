@@ -12,7 +12,7 @@ module.exports = {
   | define a driver too.
   |
   */
-  connection: Env.get('MAIL_CONNECTION'),
+  connection: Env.get('MAIL_CONNECTION', 'smtp'),
 
   /*
   |--------------------------------------------------------------------------
@@ -26,11 +26,11 @@ module.exports = {
     driver: 'smtp',
     pool: true,
     port: 2525,
-    host: Env.get('MAIL_HOST'), //POR SEGURANÇA CONFIGS INSERIDAS NO .ENV
+    host: Env.get('MAIL_HOST'),
     secure: false,
     auth: {
-      user: Env.get('MAIL_USERNAME'), //POR SEGURANÇA CONFIGS INSERIDAS NO .ENV
-      pass: Env.get('MAIL_PASSWORD')  //POR SEGURANÇA CONFIGS INSERIDAS NO .ENV
+      user: Env.get('MAIL_USERNAME'),
+      pass: Env.get('MAIL_PASSWORD')
     },
     maxConnections: 5,
     maxMessages: 100,
