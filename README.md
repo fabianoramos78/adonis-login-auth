@@ -1,2 +1,2 @@
-# Adonis sistema de login con confirmação de email via token
+# AdonisJS sistema de login com confirmação de email via token
 
